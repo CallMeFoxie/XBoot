@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.1</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>{5a98e5de-024d-41bd-9472-9485094fd77d}</ProjectGuid>
+    <avrdevice>ATxmega128A4U</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>XBoot</AssemblyName>
+    <Name>XBoot</Name>
+    <RootNamespace>XBoot</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <OverrideVtorValue />
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfVersion>3.5.0</AsfVersion>
+    <avrtoolinterface>PDI</avrtoolinterface>
+    <avrtool>com.atmel.avrdbg.tool.avrdragon</avrtool>
+    <com_atmel_avrdbg_tool_avrdragon>
+      <ToolType xmlns="">com.atmel.avrdbg.tool.avrdragon</ToolType>
+      <ToolName xmlns="">AVR Dragon</ToolName>
+      <ToolNumber xmlns="">00A20002264D</ToolNumber>
+      <KeepTimersRunning xmlns="">true</KeepTimersRunning>
+      <OverrideVtor xmlns="">false</OverrideVtor>
+      <OverrideVtorValue xmlns="">
+      </OverrideVtorValue>
+      <Channel xmlns="">
+        <host>127.0.0.1</host>
+        <port>57099</port>
+        <ssl>False</ssl>
+      </Channel>
+      <ToolOptions xmlns="">
+        <InterfaceName>PDI</InterfaceName>
+        <InterfaceProperties>
+          <JtagDbgClock>200000</JtagDbgClock>
+          <JtagProgClock>1000000</JtagProgClock>
+          <IspClock>150000</IspClock>
+          <JtagInChain>false</JtagInChain>
+          <JtagEnableExtResetOnStartSession>false</JtagEnableExtResetOnStartSession>
+          <JtagDevicesBefore>0</JtagDevicesBefore>
+          <JtagDevicesAfter>0</JtagDevicesAfter>
+          <JtagInstrBitsBefore>0</JtagInstrBitsBefore>
+          <JtagInstrBitsAfter>0</JtagInstrBitsAfter>
+        </InterfaceProperties>
+      </ToolOptions>
+    </com_atmel_avrdbg_tool_avrdragon>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress />
+    <UncachedRange />
+    <BootSegment>2</BootSegment>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+  <options />
+  <configurations />
+  <files />
+  <documentation help="" />
+  <offline-documentation help="" />
+  <dependencies>
+    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.5.0" />
+  </dependencies>
+</framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc xmlns="">
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.linker.memorysettings.Flash>
+          <ListValues>
+            <Value>.text=0x10000</Value>
+            <Value>.selfupdater=0x10E00</Value>
+          </ListValues>
+        </avrgcc.linker.memorysettings.Flash>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc xmlns="">
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.linker.memorysettings.Flash>
+          <ListValues>
+            <Value>.ftext=0x10000</Value>
+            <Value>.selfupdater=0x10E00</Value>
+          </ListValues>
+        </avrgcc.linker.memorysettings.Flash>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="board\board.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="board\coco.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="board\mini.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="board\ultra.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="bootloader\bootloader.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="bootloader\bootloader.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Conf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\clock\clock.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\clock\clock.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\crc\crc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\crc\crc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\global.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\isp\isp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\isp\isp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\led\led.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\led\led.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\pmic\pmic.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\pmic\pmic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\nvm\nvm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\nvm\nvm.s">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\timer\timer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\timer\timer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\uart\uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\uart\uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\usb\usb\usb_cdc_desc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\usb\usb\usb_desc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\usb\xboard\cdc\cdc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\usb\xboard\cdc\cdc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\usb\xboard\cdc\usb_cdc_desc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\usb\xboard\cdc\usb_cdc_desc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\usb\xboard\usb.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\usb\xboard\usb.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\usb\xboard\usb_desc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\usb\xboard\usb_desc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="selfupdater\selfupdater.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="selfupdater\selfupdater.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="selfupdater\selfnvm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="selfupdater\selfnvm.s">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XBoot.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="drivers" />
+    <Folder Include="drivers\clock" />
+    <Folder Include="drivers\isp" />
+    <Folder Include="drivers\led" />
+    <Folder Include="drivers\crc" />
+    <Folder Include="drivers\timer" />
+    <Folder Include="drivers\pmic" />
+    <Folder Include="drivers\spi" />
+    <Folder Include="drivers\nvm" />
+    <Folder Include="drivers\usb" />
+    <Folder Include="drivers\uart" />
+    <Folder Include="drivers\usb\atmel" />
+    <Folder Include="drivers\usb\xboard" />
+    <Folder Include="drivers\usb\usb" />
+    <Folder Include="drivers\usb\xboard\cdc" />
+    <Folder Include="board" />
+    <Folder Include="bootloader" />
+    <Folder Include="selfupdater" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
